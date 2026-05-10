@@ -11,9 +11,18 @@ const t = useTranslations(lang);
 ---
 
 <section class="relative min-h-[100dvh] flex items-center pt-24 pb-12 md:pt-28 md:pb-16 overflow-hidden">
-  <div class="absolute inset-0 bg-gradient-to-br from-bg via-white to-bg/80"></div>
-  <div class="absolute bottom-0 left-0 w-[30%] h-[50%] bg-gradient-to-tr from-light-green/[0.06] to-transparent"></div>
-  <div class="absolute bottom-[10%] left-[5%] w-[20rem] h-[20rem] bg-accent/[0.03] rounded-full blur-[100px]"></div>
+  <div class="absolute inset-0 overflow-hidden">
+    <img
+      src="/images/hero-bg3.png"
+      alt=""
+      class="w-full h-full object-cover object-[70%_center] sm:object-center"
+      loading="lazy"
+    />
+  </div>
+  <div class="absolute inset-0 bg-gradient-to-br from-bg/40 via-bg/30 to-bg/40"></div>
+  <div class="absolute inset-0 bg-gradient-to-t from-bg/60 via-transparent to-bg/30"></div>
+  <div class="absolute bottom-0 left-0 w-[30%] h-[50%] bg-gradient-to-tr from-light-green/[0.12] to-transparent"></div>
+  <div class="absolute bottom-[10%] left-[5%] w-[20rem] h-[20rem] bg-accent/[0.06] rounded-full blur-[100px]"></div>
 
   <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 w-full">
     <div class="max-w-3xl">
@@ -38,7 +47,7 @@ const t = useTranslations(lang);
           <span class="text-gradient-hero">{t.hero.title}</span>
         </h1>
 
-        <p class="text-base sm:text-lg md:text-xl text-muted/90 leading-[1.7] max-w-xl animate-fade-in-up delay-300">
+        <p class="text-base sm:text-lg md:text-xl text-text leading-[1.7] max-w-xl animate-fade-in-up delay-300">
           Professionelle Hausmeisterdienstleistungen für Wohnanlagen, Gewerbeimmobilien und Privatkunden. Wir kümmern uns um alles – damit Sie sich entspannen können.
         </p>
 
