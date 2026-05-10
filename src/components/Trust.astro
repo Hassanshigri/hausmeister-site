@@ -1,0 +1,40 @@
+---
+import { useTranslations } from '../i18n/utils';
+import type { Language } from '../i18n/utils';
+
+interface Props {
+  lang: Language;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const featureIcons: Record<string, string> = {
+  shield: `<svg class="w-6 h-6 md:w-7 md:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>`,
+  clock: `<svg class="w-6 h-6 md:w-7 md:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>`,
+  flexible: `<svg class="w-6 h-6 md:w-7 md:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" /></svg>`,
+  price: `<svg class="w-6 h-6 md:w-7 md:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>`,
+};
+---
+
+<section class="relative py-16 md:py-20 lg:py-24 bg-white overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-b from-bg/30 via-white to-bg/30"></div>
+  <div class="absolute left-1/2 top-0 w-[60%] h-[1px] bg-gradient-to-r from-transparent via-primary/10 to-transparent"></div>
+
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 lg:gap-14">
+      {t.trust.items.map((feature, index) => (
+        <div class="text-center group">
+          <div class="relative mx-auto mb-5 w-16 h-16 md:w-20 md:h-20">
+            <div class="absolute inset-0 rounded-full bg-gradient-to-br from-primary/10 to-accent/10 group-hover:from-primary group-hover:to-accent transition-all duration-500 scale-100 group-hover:scale-110"></div>
+            <div class="absolute inset-[3px] rounded-full bg-white flex items-center justify-center text-primary group-hover:text-white transition-all duration-500">
+              <Fragment set:html={featureIcons[["shield","clock","flexible","price"][index]]} />
+            </div>
+          </div>
+          <h3 class="text-sm md:text-base lg:text-lg font-heading font-bold text-primary mb-1.5 tracking-tight">{feature.title}</h3>
+          <p class="text-xs md:text-sm text-muted/80 leading-relaxed max-w-[180px] mx-auto">{feature.text}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,70 @@
+---
+import { useTranslations } from '../i18n/utils';
+import type { Language } from '../i18n/utils';
+
+interface Props {
+  lang: Language;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section id="about" class="relative py-20 md:py-28 lg:py-36 bg-gradient-to-b from-bg to-white overflow-hidden">
+  <div class="absolute top-0 right-0 w-[50%] h-full bg-gradient-to-bl from-primary/[0.02] to-transparent pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 items-center">
+      <div class="space-y-7">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary/8 text-primary rounded-full border border-primary/10">
+          <span class="w-1.5 h-1.5 bg-primary rounded-full"></span>
+          <span class="text-[11px] sm:text-xs font-semibold tracking-[0.2em] uppercase">ÜBER UNS</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-text leading-[1.1] tracking-tight">
+          Ihr vertrauensvoller Partner für <span class="text-gradient">Immobilienpflege</span>
+        </h2>
+        <p class="text-base sm:text-lg text-muted/80 leading-relaxed">
+          Mit über 5 Jahren Erfahrung in Ahaus und Umgebung bieten wir professionelle Hausmeisterdienstleistungen für Wohnanlagen, Gewerbeimmobilien und Privatkunden. Unser Team aus erfahrenen Fachkräften sorgt für Sauberkeit, Sicherheit und Werterhalt Ihrer Immobilie.
+        </p>
+        <div class="space-y-4 pt-2">
+          {[
+            { title: lang === 'de' ? "Erfahrenes Team" : "Experienced Team", desc: lang === 'de' ? "Qualifizierte Fachkräfte mit langjähriger Erfahrung" : "Qualified professionals with years of experience" },
+            { title: lang === 'de' ? "Zuverlässiger Service" : "Reliable Service", desc: lang === 'de' ? "Termintreue und gleichbleibend hohe Qualität" : "Punctual appointments and consistently high quality" },
+            { title: lang === 'de' ? "Kundenzufriedenheit" : "Customer Satisfaction", desc: lang === 'de' ? "Ihre Zufriedenheit steht bei uns an erster Stelle" : "Your satisfaction is our top priority" },
+          ].map((item) => (
+            <div class="flex items-start gap-4 p-4 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 hover:border-primary/10">
+              <div class="w-11 h-11 bg-primary/8 rounded-xl flex items-center justify-center shrink-0 mt-0.5">
+                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-[15px] font-heading font-bold text-text mb-0.5">{item.title}</h4>
+                <p class="text-sm text-muted/80">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="absolute -top-4 -right-4 w-48 h-48 bg-primary/5 rounded-full blur-[80px]"></div>
+        <div class="grid grid-cols-2 gap-4 sm:gap-5">
+          {[
+            { number: "5+", label: lang === 'de' ? "Jahre Erfahrung" : "Years Experience" },
+            { number: "100+", label: lang === 'de' ? "Zufriedene Kunden" : "Happy Clients" },
+            { number: "24/7", label: lang === 'de' ? "Erreichbar" : "Available" },
+            { number: "100%", label: lang === 'de' ? "Zuverlässigkeit" : "Reliability" },
+          ].map((stat) => (
+            <div class="bg-white border border-gray-100 rounded-2xl p-6 sm:p-7 text-center shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-primary/10">
+              <div class="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent mb-1">
+                {stat.number}
+              </div>
+              <div class="text-xs sm:text-sm text-muted/80 font-medium">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
