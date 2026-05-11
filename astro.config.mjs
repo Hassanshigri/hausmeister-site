@@ -9,5 +9,13 @@ export default defineConfig({
   },
   server: {
     host: true
-  }
+  },
+  image: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+    ],
+  },
 });
