@@ -11,29 +11,29 @@ const t = useTranslations(lang);
 ---
 
 <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-700" id="navbar">
-  <nav class="transition-all duration-700" id="navInner">
-    <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-14">
-      <div class="flex items-center justify-between h-[72px] lg:h-[80px]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
+    <nav class="transition-all duration-700 rounded-2xl" id="navInner">
+      <div class="flex items-center justify-between h-[64px] lg:h-[72px] px-5 sm:px-7 lg:px-9">
         <a href={`/${lang}`} class="flex items-center gap-3 group shrink-0">
           <img src="/images/logo.ico" alt="AHSAN" class="w-9 h-9 lg:w-10 lg:h-10 rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-500" />
           <div>
-            <span class="font-heading font-semibold text-base lg:text-lg text-forest tracking-tight leading-none block">AHSAN</span>
-            <span class="text-[8px] lg:text-[9px] text-gold font-semibold tracking-[0.3em] leading-tight block uppercase">Premium Services</span>
+            <span class="nav-logo font-heading font-semibold text-base lg:text-lg tracking-tight leading-none block">AHSAN</span>
+            <span class="nav-logo-sub text-[8px] lg:text-[9px] font-semibold tracking-[0.3em] leading-tight block uppercase">Premium Services</span>
           </div>
         </a>
 
         <div class="hidden lg:flex items-center gap-14">
-          <a href={`/${lang}`} class="text-charcoal/85 hover:text-forest font-body font-medium text-sm tracking-wider transition-all duration-300 relative after:absolute after:bottom-[-6px] after:left-0 after:w-0 after:h-[1.5px] after:bg-gold after:rounded-full after:transition-all hover:after:w-full">{t.nav.home}</a>
-          <a href={`/${lang}#services`} class="text-charcoal/85 hover:text-forest font-body font-medium text-sm tracking-wider transition-all duration-300 relative after:absolute after:bottom-[-6px] after:left-0 after:w-0 after:h-[1.5px] after:bg-gold after:rounded-full after:transition-all hover:after:w-full">{t.nav.services}</a>
-          <a href={`/${lang}#gallery`} class="text-charcoal/85 hover:text-forest font-body font-medium text-sm tracking-wider transition-all duration-300 relative after:absolute after:bottom-[-6px] after:left-0 after:w-0 after:h-[1.5px] after:bg-gold after:rounded-full after:transition-all hover:after:w-full">{t.nav.gallery}</a>
-          <a href={`/${lang}#about`} class="text-charcoal/85 hover:text-forest font-body font-medium text-sm tracking-wider transition-all duration-300 relative after:absolute after:bottom-[-6px] after:left-0 after:w-0 after:h-[1.5px] after:bg-gold after:rounded-full after:transition-all hover:after:w-full">{t.nav.about}</a>
-          <a href={`/${lang}#contact`} class="text-charcoal/85 hover:text-forest font-body font-medium text-sm tracking-wider transition-all duration-300 relative after:absolute after:bottom-[-6px] after:left-0 after:w-0 after:h-[1.5px] after:bg-gold after:rounded-full after:transition-all hover:after:w-full">{t.nav.contact}</a>
+          <a href={`/${lang}`} class="nav-link font-body font-medium text-sm tracking-wider transition-all duration-300 relative after:absolute after:bottom-[-6px] after:left-0 after:w-0 after:h-[1.5px] after:bg-gold after:rounded-full after:transition-all hover:after:w-full">{t.nav.home}</a>
+          <a href={`/${lang}#services`} class="nav-link font-body font-medium text-sm tracking-wider transition-all duration-300 relative after:absolute after:bottom-[-6px] after:left-0 after:w-0 after:h-[1.5px] after:bg-gold after:rounded-full after:transition-all hover:after:w-full">{t.nav.services}</a>
+          <a href={`/${lang}#gallery`} class="nav-link font-body font-medium text-sm tracking-wider transition-all duration-300 relative after:absolute after:bottom-[-6px] after:left-0 after:w-0 after:h-[1.5px] after:bg-gold after:rounded-full after:transition-all hover:after:w-full">{t.nav.gallery}</a>
+          <a href={`/${lang}#about`} class="nav-link font-body font-medium text-sm tracking-wider transition-all duration-300 relative after:absolute after:bottom-[-6px] after:left-0 after:w-0 after:h-[1.5px] after:bg-gold after:rounded-full after:transition-all hover:after:w-full">{t.nav.about}</a>
+          <a href={`/${lang}#contact`} class="nav-link font-body font-medium text-sm tracking-wider transition-all duration-300 relative after:absolute after:bottom-[-6px] after:left-0 after:w-0 after:h-[1.5px] after:bg-gold after:rounded-full after:transition-all hover:after:w-full">{t.nav.contact}</a>
         </div>
 
         <div class="flex items-center gap-5">
           <a
             href={lang === 'de' ? '/en' : '/'}
-            class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-gold/30 text-gold hover:bg-gold hover:text-white transition-all duration-300 text-xs font-body font-semibold group"
+            class="nav-btn flex items-center gap-2 px-4 py-2.5 rounded-xl border transition-all duration-300 text-xs font-body font-semibold group"
             aria-label={lang === 'de' ? 'Switch to English' : 'Wechseln zu Deutsch'}
           >
             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -56,7 +56,7 @@ const t = useTranslations(lang);
 
           <button
             id="mobile-menu-btn"
-            class="lg:hidden w-11 h-11 flex items-center justify-center rounded-xl border border-gold/30 text-gold hover:bg-gold hover:text-white transition-all duration-300"
+            class="nav-btn lg:hidden w-11 h-11 flex items-center justify-center rounded-xl border transition-all duration-300"
             aria-label="Menü öffnen"
           >
             <svg class="w-5 h-5 menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -68,7 +68,7 @@ const t = useTranslations(lang);
           </button>
         </div>
       </div>
-    </div>
+    </nav>
 
     <div id="mobile-menu" class="lg:hidden hidden fixed inset-0 top-0 z-40 bg-cream/95 backdrop-blur-2xl">
       <div class="flex flex-col h-full pt-32 pb-8 px-6">
@@ -119,8 +119,24 @@ const t = useTranslations(lang);
         </div>
       </div>
     </div>
-  </nav>
+  </div>
 </header>
+
+<style>
+  #navInner:not(.glass) .nav-logo { color: white; text-shadow: 0 1px 3px rgba(0,0,0,0.3); }
+  #navInner:not(.glass) .nav-logo-sub { color: rgba(194,164,109,0.9); text-shadow: 0 1px 2px rgba(0,0,0,0.2); }
+  #navInner:not(.glass) .nav-link { color: rgba(255,255,255,0.8); text-shadow: 0 1px 2px rgba(0,0,0,0.2); }
+  #navInner:not(.glass) .nav-link:hover { color: white; }
+  #navInner:not(.glass) .nav-btn { border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.8); }
+  #navInner:not(.glass) .nav-btn:hover { background: white; color: #0B3B2E; }
+
+  #navInner.glass .nav-logo { color: #0B3B2E; }
+  #navInner.glass .nav-logo-sub { color: #C2A46D; }
+  #navInner.glass .nav-link { color: rgba(26,26,26,0.85); }
+  #navInner.glass .nav-link:hover { color: #0B3B2E; }
+  #navInner.glass .nav-btn { border-color: rgba(194,164,109,0.3); color: #C2A46D; }
+  #navInner.glass .nav-btn:hover { background: #C2A46D; color: white; }
+</style>
 
 <script>
   const navbar = document.getElementById('navbar');
