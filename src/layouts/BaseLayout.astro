@@ -1,5 +1,5 @@
 ---
-import '../styles/global.css';
+import css from '../styles/global.css?inline';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 import { useTranslations, getLangFromUrl } from '../i18n/utils';
@@ -32,8 +32,12 @@ const pageDescription = description || t.meta.description;
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
-    <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="preload" as="style" href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    </noscript>
     <link rel="preload" as="image" href="/images/hero-bg3.jpg" fetchpriority="high" />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -49,6 +53,7 @@ const pageDescription = description || t.meta.description;
     <meta name="twitter:description" content={pageDescription} />
 
     <meta name="keywords" content="Premium Immobilienpflege, Hausmeisterservice Ahaus, Gebäudereinigung, Gartenpflege, Winterdienst, Facility Management" />
+    <style is:global set:html={css}></style>
   </head>
   <body class="min-h-screen flex flex-col bg-cream text-charcoal antialiased">
     <Navigation lang={lang} />

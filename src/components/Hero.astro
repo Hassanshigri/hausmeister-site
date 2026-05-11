@@ -30,7 +30,7 @@ const t = useTranslations(lang);
   <div class="absolute bottom-[30%] right-[8%] w-3 h-3 border border-white/15 rounded-full animate-float" style="animation-delay: 1.5s;"></div>
   <div class="absolute top-[40%] left-[15%] w-2 h-2 bg-gold/20 rounded-full animate-float" style="animation-delay: 2.5s;"></div>
 
-  <div class="absolute inset-0 pointer-events-none after:absolute after:inset-0 after:bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJmIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjc0IiBudW1PY3RhdmVzPSIzIiAvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNmKSIgb3BhY2l0eT0iLjA0IiAvPjwvc3ZnPg==')] after:bg-repeat after:bg-[length:300px_300px] after:opacity-50"></div>
+
 
   <div class="bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-cream to-transparent absolute z-10"></div>
 
@@ -153,8 +153,7 @@ const t = useTranslations(lang);
           const scrollY = window.scrollY;
           const maxScroll = window.innerHeight;
           const progress = Math.min(scrollY / maxScroll, 0.5);
-          heroParallax.style.transform = `translateY(${progress * 60}px) scale(${1 + progress * 0.04})`;
-          heroParallax.style.filter = `brightness(${1 - progress * 0.15})`;
+          heroParallax.style.transform = `translateY(${progress * 40}px)`;
           ticking = false;
         });
         ticking = true;
