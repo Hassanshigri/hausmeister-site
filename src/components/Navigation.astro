@@ -10,97 +10,97 @@ const { lang } = Astro.props;
 const t = useTranslations(lang);
 ---
 
-<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-500" id="navbar">
-  <nav class="border-b border-white/20 transition-all duration-500" id="navInner">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-      <div class="flex items-center justify-between h-16 sm:h-18 lg:h-20">
+<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-700" id="navbar">
+  <nav class="transition-all duration-700" id="navInner">
+    <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-14">
+      <div class="flex items-center justify-between h-[72px] lg:h-[80px]">
         <a href={`/${lang}`} class="flex items-center gap-3 group shrink-0">
-          <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-primary to-dark flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300">
-            <span class="text-white font-heading font-extrabold text-lg sm:text-xl">A</span>
+          <div class="w-10 h-10 lg:w-11 lg:h-11 rounded-xl bg-forest flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-500">
+            <span class="text-white font-heading font-bold text-lg lg:text-xl tracking-tight">A</span>
           </div>
-          <div class="hidden sm:block">
-            <span class="font-heading font-bold text-base sm:text-lg text-primary tracking-tight leading-none block">AHSAN</span>
-            <span class="text-[9px] sm:text-[10px] text-primary/70 font-semibold tracking-[0.15em] leading-tight block">HAUSMEISTERSERVICE</span>
+          <div>
+            <span class="font-heading font-semibold text-base lg:text-lg text-forest tracking-tight leading-none block">AHSAN</span>
+            <span class="text-[8px] lg:text-[9px] text-gold font-semibold tracking-[0.3em] leading-tight block uppercase">Premium Services</span>
           </div>
         </a>
 
-        <div class="hidden lg:flex items-center gap-10">
-          <a href={`/${lang}`} class="text-text/80 hover:text-primary font-heading font-medium text-[13px] tracking-wide transition-all duration-300 relative after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-primary after:rounded-full after:transition-all hover:after:w-full">{t.nav.home}</a>
-          <a href={`/${lang}#services`} class="text-text/80 hover:text-primary font-heading font-medium text-[13px] tracking-wide transition-all duration-300 relative after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-primary after:rounded-full after:transition-all hover:after:w-full">{t.nav.services}</a>
-          <a href={`/${lang}#gallery`} class="text-text/80 hover:text-primary font-heading font-medium text-[13px] tracking-wide transition-all duration-300 relative after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-primary after:rounded-full after:transition-all hover:after:w-full">{t.nav.gallery}</a>
-          <a href={`/${lang}#about`} class="text-text/80 hover:text-primary font-heading font-medium text-[13px] tracking-wide transition-all duration-300 relative after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-primary after:rounded-full after:transition-all hover:after:w-full">{t.nav.about}</a>
-          <a href={`/${lang}#contact`} class="text-text/80 hover:text-primary font-heading font-medium text-[13px] tracking-wide transition-all duration-300 relative after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-primary after:rounded-full after:transition-all hover:after:w-full">{t.nav.contact}</a>
+        <div class="hidden lg:flex items-center gap-14">
+          <a href={`/${lang}`} class="text-charcoal/85 hover:text-forest font-body font-medium text-sm tracking-wider transition-all duration-300 relative after:absolute after:bottom-[-6px] after:left-0 after:w-0 after:h-[1.5px] after:bg-gold after:rounded-full after:transition-all hover:after:w-full">{t.nav.home}</a>
+          <a href={`/${lang}#services`} class="text-charcoal/85 hover:text-forest font-body font-medium text-sm tracking-wider transition-all duration-300 relative after:absolute after:bottom-[-6px] after:left-0 after:w-0 after:h-[1.5px] after:bg-gold after:rounded-full after:transition-all hover:after:w-full">{t.nav.services}</a>
+          <a href={`/${lang}#gallery`} class="text-charcoal/85 hover:text-forest font-body font-medium text-sm tracking-wider transition-all duration-300 relative after:absolute after:bottom-[-6px] after:left-0 after:w-0 after:h-[1.5px] after:bg-gold after:rounded-full after:transition-all hover:after:w-full">{t.nav.gallery}</a>
+          <a href={`/${lang}#about`} class="text-charcoal/85 hover:text-forest font-body font-medium text-sm tracking-wider transition-all duration-300 relative after:absolute after:bottom-[-6px] after:left-0 after:w-0 after:h-[1.5px] after:bg-gold after:rounded-full after:transition-all hover:after:w-full">{t.nav.about}</a>
+          <a href={`/${lang}#contact`} class="text-charcoal/85 hover:text-forest font-body font-medium text-sm tracking-wider transition-all duration-300 relative after:absolute after:bottom-[-6px] after:left-0 after:w-0 after:h-[1.5px] after:bg-gold after:rounded-full after:transition-all hover:after:w-full">{t.nav.contact}</a>
         </div>
 
-        <div class="flex items-center gap-3 sm:gap-4">
+        <div class="flex items-center gap-5">
           <a
             href={lang === 'de' ? '/en' : '/'}
-            class="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-2 rounded-xl border border-primary/20 text-primary hover:bg-primary hover:text-white transition-all duration-300 text-xs sm:text-sm font-heading font-semibold group"
+            class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-gold/30 text-gold hover:bg-gold hover:text-white transition-all duration-300 text-xs font-body font-semibold group"
             aria-label={lang === 'de' ? 'Switch to English' : 'Wechseln zu Deutsch'}
           >
-            <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            <span class="text-xs font-semibold">{lang === 'de' ? 'EN' : 'DE'}</span>
+            <span class="text-xs font-semibold tracking-wider">{lang === 'de' ? 'EN' : 'DE'}</span>
           </a>
 
           <a
             href={`https://wa.me/4915901313940?text=${encodeURIComponent(t.whatsapp.message)}`}
             target="_blank"
             rel="noopener noreferrer"
-            class="hidden md:inline-flex items-center gap-2.5 px-5 py-2.5 bg-primary text-white font-heading font-semibold text-[13px] rounded-full hover:bg-dark transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:scale-[0.98]"
+            class="hidden md:inline-flex items-center gap-2.5 px-6 py-3 bg-forest text-white font-body font-medium text-sm rounded-full hover:bg-dark transition-all duration-500 shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:scale-[0.98]"
           >
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.296-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
             </svg>
-            <span>{t.hero.ctaPrimary}</span>
+            <span>Contact</span>
           </a>
 
           <button
             id="mobile-menu-btn"
-            class="lg:hidden w-10 h-10 flex items-center justify-center rounded-xl border border-primary/20 text-primary hover:bg-primary hover:text-white transition-all duration-300"
+            class="lg:hidden w-11 h-11 flex items-center justify-center rounded-xl border border-gold/30 text-gold hover:bg-gold hover:text-white transition-all duration-300"
             aria-label="Menü öffnen"
           >
             <svg class="w-5 h-5 menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
             <svg class="w-5 h-5 close-icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
       </div>
     </div>
 
-    <div id="mobile-menu" class="lg:hidden hidden fixed inset-0 top-0 z-40 bg-white/95 backdrop-blur-2xl">
-      <div class="flex flex-col h-full pt-24 pb-8 px-6">
+    <div id="mobile-menu" class="lg:hidden hidden fixed inset-0 top-0 z-40 bg-cream/95 backdrop-blur-2xl">
+      <div class="flex flex-col h-full pt-32 pb-8 px-6">
         <div class="flex-1 space-y-2">
-          <a href={`/${lang}`} class="flex items-center gap-4 px-4 py-4 text-text hover:text-primary hover:bg-primary/5 rounded-2xl font-heading font-semibold text-lg transition-all duration-200">
-            <svg class="w-5 h-5 text-primary/60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
+          <a href={`/${lang}`} class="flex items-center gap-4 px-4 py-4 text-charcoal hover:text-forest hover:bg-forest/5 rounded-2xl font-heading font-semibold text-lg transition-all duration-200">
+            <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
             {t.nav.home}
           </a>
-          <a href={`/${lang}#services`} class="flex items-center gap-4 px-4 py-4 text-text hover:text-primary hover:bg-primary/5 rounded-2xl font-heading font-semibold text-lg transition-all duration-200">
-            <svg class="w-5 h-5 text-primary/60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+          <a href={`/${lang}#services`} class="flex items-center gap-4 px-4 py-4 text-charcoal hover:text-forest hover:bg-forest/5 rounded-2xl font-heading font-semibold text-lg transition-all duration-200">
+            <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
             {t.nav.services}
           </a>
-          <a href={`/${lang}#gallery`} class="flex items-center gap-4 px-4 py-4 text-text hover:text-primary hover:bg-primary/5 rounded-2xl font-heading font-semibold text-lg transition-all duration-200">
-            <svg class="w-5 h-5 text-primary/60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+          <a href={`/${lang}#gallery`} class="flex items-center gap-4 px-4 py-4 text-charcoal hover:text-forest hover:bg-forest/5 rounded-2xl font-heading font-semibold text-lg transition-all duration-200">
+            <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
             {t.nav.gallery}
           </a>
-          <a href={`/${lang}#about`} class="flex items-center gap-4 px-4 py-4 text-text hover:text-primary hover:bg-primary/5 rounded-2xl font-heading font-semibold text-lg transition-all duration-200">
-            <svg class="w-5 h-5 text-primary/60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          <a href={`/${lang}#about`} class="flex items-center gap-4 px-4 py-4 text-charcoal hover:text-forest hover:bg-forest/5 rounded-2xl font-heading font-semibold text-lg transition-all duration-200">
+            <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
             {t.nav.about}
           </a>
-          <a href={`/${lang}#contact`} class="flex items-center gap-4 px-4 py-4 text-text hover:text-primary hover:bg-primary/5 rounded-2xl font-heading font-semibold text-lg transition-all duration-200">
-            <svg class="w-5 h-5 text-primary/60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+          <a href={`/${lang}#contact`} class="flex items-center gap-4 px-4 py-4 text-charcoal hover:text-forest hover:bg-forest/5 rounded-2xl font-heading font-semibold text-lg transition-all duration-200">
+            <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
             {t.nav.contact}
           </a>
         </div>
 
-        <div class="space-y-4 pt-6 border-t border-gray-100">
+        <div class="space-y-4 pt-6 border-t border-stone">
           <a
             href={lang === 'de' ? '/en' : '/'}
-            class="flex items-center justify-center gap-2.5 w-full px-4 py-3.5 rounded-2xl font-semibold text-sm bg-primary text-white shadow-lg transition-all duration-200"
+            class="flex items-center justify-center gap-2.5 w-full px-4 py-3.5 rounded-2xl font-semibold text-sm bg-gold text-white shadow-lg transition-all duration-200"
           >
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -111,7 +111,7 @@ const t = useTranslations(lang);
             href={`https://wa.me/4915901313940?text=${encodeURIComponent(t.whatsapp.message)}`}
             target="_blank"
             rel="noopener noreferrer"
-            class="flex items-center justify-center gap-3 w-full px-5 py-4 bg-primary text-white font-heading font-bold text-base rounded-2xl shadow-lg hover:bg-dark transition-all duration-300"
+            class="flex items-center justify-center gap-3 w-full px-5 py-4 bg-forest text-white font-heading font-semibold text-base rounded-2xl shadow-lg hover:bg-dark transition-all duration-300"
           >
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.296-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
@@ -133,12 +133,10 @@ const t = useTranslations(lang);
   const closeIcon = mobileMenuBtn?.querySelector('.close-icon');
 
   function updateNavbar() {
-    if (window.scrollY > 30) {
-      navInner?.classList.add('glass', 'shadow-lg', 'border-b-gray-200/50');
-      navInner?.classList.remove('border-b-white/20');
+    if (window.scrollY > 40) {
+      navInner?.classList.add('glass', 'shadow-lg');
     } else {
-      navInner?.classList.remove('glass', 'shadow-lg', 'border-b-gray-200/50');
-      navInner?.classList.add('border-b-white/20');
+      navInner?.classList.remove('glass', 'shadow-lg');
     }
   }
 
