@@ -85,6 +85,8 @@ const layout = [
                 alt=""
                 width={images[index].w}
                 height={images[index].h}
+                widths={[400, 800]}
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
               />
             </div>
