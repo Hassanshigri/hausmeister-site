@@ -147,9 +147,12 @@ const t = useTranslations(lang);
   const closeIcon = mobileMenuBtn?.querySelector('.close-icon');
 
   function updateNavbar() {
-    if (window.scrollY > 40) {
+    const isScrolled = window.scrollY > 40;
+    const hasClass = navInner?.classList.contains('glass');
+    
+    if (isScrolled && !hasClass) {
       navInner?.classList.add('glass', 'shadow-lg');
-    } else {
+    } else if (!isScrolled && hasClass) {
       navInner?.classList.remove('glass', 'shadow-lg');
     }
   }
