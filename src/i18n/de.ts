@@ -1,7 +1,7 @@
 export const DE = {
   meta: {
-    title: "AHSAN HAUSMEISTERSERVICE | Professionelle Immobilienpflege in Ahaus",
-    description: "Ihr zuverlässiger Partner für Hausmeisterdienstleistungen in Ahaus. Treppenhausreinigung, Gartenpflege, Winterdienst, Mülltonnenservice und mehr."
+    title: "AHSAN | Premium Immobilien- & Gartenpflege in Ahaus",
+    description: "Erleben Sie erstklassige Immobilienpflege in Ahaus. Professionelle Gartenpflege, Reinigung, Winterdienst und Facility Management auf Luxusniveau."
   },
   nav: {
     home: "Startseite",
@@ -11,58 +11,58 @@ export const DE = {
     about: "Über uns"
   },
   hero: {
-    tagline: "Zuverlässig. Pünktlich. Professionell.",
-    title: "Ihr Partner für gepflegte Immobilien und zufriedene Mieter!",
-    badge: "ALLES AUS EINER HAND!",
-    badgeSub: "Wir kümmern uns, Sie entspannen.",
+    tagline: "Premium Immobilienpflege",
+    title: "Anspruchsvolles Wohnen beginnt mit sorgfältiger Pflege",
+    badge: "SEIT 2018",
+    badgeSub: "Vertrauensvolle Exzellenz",
     ctaPrimary: "Jetzt kontaktieren",
     ctaSecondary: "WhatsApp schreiben"
   },
   services: {
     badge: "UNSERE LEISTUNGEN",
-    title: "Was wir für Sie tun",
-    subtitle: "Professionelle Hausmeisterdienstleistungen für Ihr Zuhause",
+    title: "Was wir tun",
+    subtitle: "Umfassende Immobilienpflege mit kompromissloser Qualität und Liebe zum Detail.",
     items: [
       {
-        title: "TREPPENHAUSREINIGUNG",
-        description: "Sauberkeit und Hygiene für ein gepflegtes Wohnumfeld.",
+        title: "Treppenhausreinigung",
+        description: "Makellose Sauberkeit für Eingänge und Gemeinschaftsbereiche, die bleibenden Eindruck hinterlässt.",
         icon: "broom"
       },
       {
-        title: "GARTENPFLEGE",
-        description: "Rasenmähen, Hecken schneiden, Unkraut entfernen und mehr.",
+        title: "Gartenpflege",
+        description: "Fachkundige Landschaftsgestaltung, Rasenpflege, Hecken schnitt und botanische Betreuung.",
         icon: "grass"
       },
       {
-        title: "WINTERDIENST",
-        description: "Schnee räumen und streuen – für Ihre Sicherheit im Winter.",
+        title: "Winterdienst",
+        description: "Professioneller Schneeräum- und Streudienst für sichere Wege in der kalten Jahreszeit.",
         icon: "snowflake"
       },
       {
-        title: "MÜLLTONNENSERVICE",
-        description: "Pünktliches Bereitstellen und Zurückholen der Mülltonnen.",
+        title: "Müllmanagement",
+        description: "Diskreter und pünktlicher Mülltonnenservice für ein stets gepflegtes Anwesen.",
         icon: "trash"
       },
       {
-        title: "KLEINE REPARATUREN",
-        description: "Kleinere Reparaturen und Instandhaltungsarbeiten.",
+        title: "Instandhaltung & Reparaturen",
+        description: "Fachkundige Lösungen für Reparaturen und Werterhalt Ihrer Immobilie.",
         icon: "wrench"
       },
       {
-        title: "KONTROLLE & BETREUUNG",
-        description: "Regelmäßige Kontrollgänge und Betreuung von Wohnanlagen.",
+        title: "Immobilieninspektionen",
+        description: "Regelmäßige Kontrollen und Zustandsberichte für Ihre vollständige Sicherheit.",
         icon: "check"
       },
       {
-        title: "ALLGEMEINE HAUSMEISTERARBEITEN",
-        description: "Zuverlässige Unterstützung rund um Haus und Immobilie.",
+        title: "Concierge-Service",
+        description: "Maßgeschneiderte Handwerkerdienste für die individuellen Anforderungen Ihrer Immobilie.",
         icon: "briefcase"
       }
     ]
   },
   gallery: {
-    title: "UNSERE ARBEIT",
-    subtitle: "Ein Blick auf unsere professionellen Dienstleistungen"
+    title: "GALERIE",
+    subtitle: "Unsere Arbeit spricht für sich"
   },
   trust: {
     items: [
@@ -72,20 +72,48 @@ export const DE = {
       { title: "FAIRE PREISE", text: "Top Leistung zu fairen Konditionen." }
     ]
   },
+  testimonials: {
+    badge: "REFERENZEN",
+    title: "Von Immobilienbesitzern empfohlen",
+    subtitle: "Erfahren Sie, was unsere anspruchsvollen Kunden über uns sagen.",
+    items: [
+      {
+        name: "Anna Weber",
+        role: "Immobilienbesitzerin, Ahaus",
+        text: "Das Maß an Sorgfalt und Liebe zum Detail ist außergewöhnlich. Unsere Immobilie sah noch nie besser aus. Ein wirklich erstklassiger Service."
+      },
+      {
+        name: "Markus Hoffmann",
+        role: "Facility Manager",
+        text: "Zuverlässig, professionell und gründlich. Sie betreuen unseren gesamten Wohnkomplex mit bemerkenswerter Präzision."
+      },
+      {
+        name: "Julia Richter",
+        role: "Hauseigentümerin",
+        text: "Von der Gartenpflege bis zum Winterdienst – alles wird nahtlos erledigt. Ein Fünf-Sterne-Erlebnis jedes Mal."
+      },
+      {
+        name: "Dr. Stefan Lange",
+        role: "Gewerbeimmobilien-Investor",
+        text: "Ihr proaktiver Ansatz bei der Instandhaltung hat den Wert und die Attraktivität unserer Gebäude erheblich gesteigert."
+      }
+    ]
+  },
   contact: {
-    heading: "JETZT KONTAKTIEREN!",
+    heading: "Lassen Sie uns gemeinsam etwas Schönes schaffen",
     phone: "Telefon",
     whatsapp: "WhatsApp",
     callBtn: "Jetzt anrufen",
     whatsappBtn: "WhatsApp Chat",
-    areaHeading: "EINSATZGEBIET",
-    areaText: "48683 Ahaus und Umgebung",
-    areaNote: "Flexible Termine nach Vereinbarung."
+    areaHeading: "Einsatzgebiet",
+    areaText: "Ahaus und Umgebung",
+    areaNote: "Flexible Terminplanung"
   },
   footer: {
-    tagline: "Sauberkeit. Sicherheit. Werterhalt."
+    tagline: "Wo Pflege auf Perfektion trifft.",
+    social: "Folgen Sie uns"
   },
   whatsapp: {
-    message: "Hallo! Ich interessiere mich für Ihre Hausmeisterdienstleistungen."
+    message: "Hallo! Ich möchte mehr über Ihre Premium-Immobiliendienstleistungen erfahren."
   }
 };

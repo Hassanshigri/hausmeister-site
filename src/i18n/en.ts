@@ -1,7 +1,7 @@
 export const EN = {
   meta: {
-    title: "AHSAN PROPERTY SERVICES | Professional Property Maintenance in Ahaus",
-    description: "Your reliable partner for property maintenance services in Ahaus. Staircase cleaning, garden care, winter services, bin service and more."
+    title: "AHSAN | Premium Property & Garden Care in Ahaus",
+    description: "Experience premium property maintenance in Ahaus. Professional garden care, cleaning, winter service and facility management with luxury standards."
   },
   nav: {
     home: "Home",
@@ -11,58 +11,58 @@ export const EN = {
     about: "About"
   },
   hero: {
-    tagline: "Reliable. Punctual. Professional.",
-    title: "Your partner for well-maintained properties and satisfied tenants!",
-    badge: "ALL FROM ONE HAND!",
-    badgeSub: "We take care, you relax.",
+    tagline: "Premium Property Care",
+    title: "Refined living begins with meticulous care",
+    badge: "EST. 2018",
+    badgeSub: "Trusted Excellence",
     ctaPrimary: "Contact us now",
     ctaSecondary: "Write on WhatsApp"
   },
   services: {
     badge: "OUR SERVICES",
-    title: "What we do for you",
-    subtitle: "Professional property maintenance services for your home",
+    title: "What we do",
+    subtitle: "Comprehensive property care with uncompromising quality and attention to detail.",
     items: [
       {
-        title: "STAIRCASE CLEANING",
-        description: "Cleanliness and hygiene for a well-maintained living environment.",
+        title: "Staircase Cleaning",
+        description: "Immaculate cleanliness for entrances and common areas that leave a lasting impression.",
         icon: "broom"
       },
       {
-        title: "GARDEN MAINTENANCE",
-        description: "Lawn mowing, hedge trimming, weed removal and more.",
+        title: "Garden Care",
+        description: "Expert landscaping, lawn maintenance, hedge trimming and botanical care.",
         icon: "grass"
       },
       {
-        title: "WINTER SERVICE",
-        description: "Snow clearing and gritting \u2013 for your safety in winter.",
+        title: "Winter Service",
+        description: "Professional snow clearing and gritting for safe passage all season long.",
         icon: "snowflake"
       },
       {
-        title: "BIN SERVICE",
-        description: "Timely preparation and return of waste bins.",
+        title: "Waste Management",
+        description: "Discreet and timely bin service that keeps your property pristine.",
         icon: "trash"
       },
       {
-        title: "MINOR REPAIRS",
-        description: "Smaller repairs and maintenance work.",
+        title: "Maintenance & Repairs",
+        description: "Skilled solutions for repairs and upkeep, preserving your property's value.",
         icon: "wrench"
       },
       {
-        title: "INSPECTION & CARE",
-        description: "Regular inspection rounds and management of residential properties.",
+        title: "Property Inspections",
+        description: "Regular oversight and condition reports for complete peace of mind.",
         icon: "check"
       },
       {
-        title: "GENERAL HANDYMAN SERVICES",
-        description: "Reliable support around house and property.",
+        title: "Concierge Services",
+        description: "Bespoke handyman services tailored to your property's unique requirements.",
         icon: "briefcase"
       }
     ]
   },
   gallery: {
-    title: "OUR WORK",
-    subtitle: "A look at our professional services"
+    title: "GALLERY",
+    subtitle: "Our work speaks for itself"
   },
   trust: {
     items: [
@@ -72,20 +72,48 @@ export const EN = {
       { title: "FAIR PRICES", text: "Top quality at fair conditions." }
     ]
   },
+  testimonials: {
+    badge: "TESTIMONIALS",
+    title: "Trusted by property owners",
+    subtitle: "Hear from our discerning clients about their experience.",
+    items: [
+      {
+        name: "Anna Weber",
+        role: "Property Owner, Ahaus",
+        text: "The level of care and attention to detail is exceptional. Our property has never looked better. Truly a premium service."
+      },
+      {
+        name: "Markus Hoffmann",
+        role: "Facility Manager",
+        text: "Reliable, professional, and impeccably thorough. They manage our entire residential complex with remarkable precision."
+      },
+      {
+        name: "Julia Richter",
+        role: "Homeowner",
+        text: "From garden care to winter service, everything is handled seamlessly. A five-star experience every time."
+      },
+      {
+        name: "Dr. Stefan Lange",
+        role: "Commercial Property Investor",
+        text: "Their proactive approach to property maintenance has significantly enhanced the value and appeal of our buildings."
+      }
+    ]
+  },
   contact: {
-    heading: "CONTACT US NOW!",
+    heading: "Let's create something beautiful together",
     phone: "Phone",
     whatsapp: "WhatsApp",
     callBtn: "Call now",
     whatsappBtn: "WhatsApp Chat",
-    areaHeading: "SERVICE AREA",
-    areaText: "48683 Ahaus and surrounding area",
-    areaNote: "Flexible appointments by arrangement."
+    areaHeading: "Service Area",
+    areaText: "Ahaus and surrounding region",
+    areaNote: "Flexible scheduling available"
   },
   footer: {
-    tagline: "Cleanliness. Safety. Value preservation."
+    tagline: "Where care meets perfection.",
+    social: "Follow Us"
   },
   whatsapp: {
-    message: "Hello! I'm interested in your property maintenance services."
+    message: "Hello! I'd like to learn more about your premium property services."
   }
 };
