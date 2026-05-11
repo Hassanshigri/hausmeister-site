@@ -44,11 +44,6 @@ export const DE = {
         icon: "trash"
       },
       {
-        title: "Instandhaltung & Reparaturen",
-        description: "Fachkundige Lösungen für Reparaturen und Werterhalt Ihrer Immobilie.",
-        icon: "wrench"
-      },
-      {
         title: "Immobilieninspektionen",
         description: "Regelmäßige Kontrollen und Zustandsberichte für Ihre vollständige Sicherheit.",
         icon: "check"

@@ -44,11 +44,6 @@ export const EN = {
         icon: "trash"
       },
       {
-        title: "Maintenance & Repairs",
-        description: "Skilled solutions for repairs and upkeep, preserving your property's value.",
-        icon: "wrench"
-      },
-      {
         title: "Property Inspections",
         description: "Regular oversight and condition reports for complete peace of mind.",
         icon: "check"
