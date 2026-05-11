@@ -22,63 +22,38 @@ const t = useTranslations(lang);
   <div class="absolute bottom-[20%] right-[5%] w-2 h-2 bg-gold/20 rounded-full animate-float" style="animation-delay: 2s;"></div>
 
   <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 items-center">
-      <div class="relative order-2 lg:order-1">
-        <div class="relative overflow-hidden rounded-3xl shadow-2xl shadow-forest/20">
-          <Image
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&fit=crop"
-            alt="Premium property care"
-            width={700}
-            height={850}
-            class="w-full h-[400px] lg:h-[500px] object-cover"
-            widths={[400, 700]}
-            sizes="(max-width: 768px) 100vw, 700px"
-          />
-          <div class="absolute inset-0 bg-gradient-to-t from-forest/40 to-transparent"></div>
+    <div class="max-w-3xl mx-auto space-y-8">
+      <div class="space-y-2">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-forest/5 text-forest/80 rounded-full border border-forest/10">
+          <span class="w-1 h-1 bg-gold rounded-full"></span>
+          <span class="text-[9px] font-body font-medium tracking-[0.3em] uppercase">{t.nav.about}</span>
         </div>
-
-        <div class="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-2xl p-6 max-w-[180px]">
-          <div class="text-3xl font-heading font-semibold text-forest leading-none mb-1">5+</div>
-          <p class="text-[11px] text-muted/60 font-body tracking-wide uppercase">Years of excellence</p>
-        </div>
-
-        <div class="absolute -top-4 -left-4 w-24 h-24 bg-gold/10 rounded-full blur-[60px]"></div>
-        <div class="absolute -bottom-8 -left-8 w-48 h-48 bg-gold/[0.04] rounded-full blur-[100px] pointer-events-none"></div>
       </div>
 
-      <div class="space-y-8 order-1 lg:order-2">
-        <div class="space-y-2">
-          <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-forest/5 text-forest/80 rounded-full border border-forest/10">
-            <span class="w-1 h-1 bg-gold rounded-full"></span>
-            <span class="text-[9px] font-body font-medium tracking-[0.3em] uppercase">{t.nav.about}</span>
-          </div>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-semibold text-charcoal leading-[0.92] tracking-tight">
+        Dedicated to <span class="text-gradient">property perfection</span>
+      </h2>
+
+      <p class="text-sm sm:text-base text-muted/70 font-body font-light leading-relaxed tracking-wide">
+        With over five years of experience serving Ahaus and the surrounding region, we deliver property care that transcends expectations. Our team of skilled professionals brings precision, reliability, and an uncompromising eye for detail to every residence and commercial property we manage.
+      </p>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4">
+        <div class="bg-cream rounded-2xl p-5 border border-stone/50">
+          <div class="text-2xl sm:text-3xl font-heading font-semibold text-forest leading-none mb-1">5+</div>
+          <p class="text-[11px] text-muted/60 font-body tracking-wide uppercase">Years</p>
         </div>
-
-        <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-semibold text-charcoal leading-[0.92] tracking-tight">
-          Dedicated to <span class="text-gradient">property perfection</span>
-        </h2>
-
-        <p class="text-sm sm:text-base text-muted/70 font-body font-light leading-relaxed tracking-wide">
-          With over five years of experience serving Ahaus and the surrounding region, we deliver property care that transcends expectations. Our team of skilled professionals brings precision, reliability, and an uncompromising eye for detail to every residence and commercial property we manage.
-        </p>
-
-        <div class="grid grid-cols-2 gap-3 pt-4">
-          <div class="bg-cream rounded-2xl p-5 border border-stone/50">
-            <div class="text-2xl sm:text-3xl font-heading font-semibold text-forest leading-none mb-1">100+</div>
-            <p class="text-[11px] text-muted/60 font-body tracking-wide uppercase">Properties served</p>
-          </div>
-          <div class="bg-cream rounded-2xl p-5 border border-stone/50">
-            <div class="text-2xl sm:text-3xl font-heading font-semibold text-forest leading-none mb-1">24/7</div>
-            <p class="text-[11px] text-muted/60 font-body tracking-wide uppercase">Rapid response</p>
-          </div>
-          <div class="bg-cream rounded-2xl p-5 border border-stone/50">
-            <div class="text-2xl sm:text-3xl font-heading font-semibold text-forest leading-none mb-1">100%</div>
-            <p class="text-[11px] text-muted/60 font-body tracking-wide uppercase">Client satisfaction</p>
-          </div>
-          <div class="bg-cream rounded-2xl p-5 border border-stone/50">
-            <div class="text-2xl sm:text-3xl font-heading font-semibold text-forest leading-none mb-1">&euro;0</div>
-            <p class="text-[11px] text-muted/60 font-body tracking-wide uppercase">Hidden fees. Ever.</p>
-          </div>
+        <div class="bg-cream rounded-2xl p-5 border border-stone/50">
+          <div class="text-2xl sm:text-3xl font-heading font-semibold text-forest leading-none mb-1">100+</div>
+          <p class="text-[11px] text-muted/60 font-body tracking-wide uppercase">Properties</p>
+        </div>
+        <div class="bg-cream rounded-2xl p-5 border border-stone/50">
+          <div class="text-2xl sm:text-3xl font-heading font-semibold text-forest leading-none mb-1">24/7</div>
+          <p class="text-[11px] text-muted/60 font-body tracking-wide uppercase">Response</p>
+        </div>
+        <div class="bg-cream rounded-2xl p-5 border border-stone/50">
+          <div class="text-2xl sm:text-3xl font-heading font-semibold text-forest leading-none mb-1">100%</div>
+          <p class="text-[11px] text-muted/60 font-body tracking-wide uppercase">Happy</p>
         </div>
       </div>
     </div>

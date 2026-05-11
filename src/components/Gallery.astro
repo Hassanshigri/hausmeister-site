@@ -45,27 +45,13 @@ const images = [
       </h2>
     </div>
 
-    <div class="columns-1 md:columns-2 lg:columns-3 gap-4 md:gap-5 lg:gap-6 space-y-4 md:space-y-5 lg:space-y-6">
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-5 lg:gap-6">
       {images.map((img) => (
-        <div class="group relative overflow-hidden rounded-3xl cursor-pointer shadow-lg shadow-black/20 hover:shadow-gold/10 hover:shadow-2xl transition-all duration-700 break-inside-avoid border border-white/[0.04]">
-          <div class="absolute inset-0 bg-gradient-to-br from-gold/[0.04] to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 pointer-events-none z-10"></div>
-          <Image
-            src={img.src}
-            alt={img.alt}
-            width={img.w}
-            height={img.h}
-            widths={[400, 600]}
-            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            class="w-full h-auto object-cover transition-all duration-700 group-hover:scale-110"
-          />
-          <div class="absolute inset-0 bg-gradient-to-t from-forest/80 via-forest/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
-            <div class="absolute bottom-0 left-0 right-0 p-6 md:p-7 lg:p-8">
-              <p class="text-white font-heading font-medium text-sm md:text-base lg:text-lg translate-y-4 group-hover:translate-y-0 transition-all duration-500 tracking-wide">
-                {img.alt}
-              </p>
-              <div class="w-8 h-[2px] bg-gold rounded-full mt-2 translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-75"></div>
-            </div>
-          </div>
+        <div class="group relative overflow-hidden rounded-3xl p-8 bg-white/5 border border-white/10 hover:border-gold/30 transition-all duration-500 text-center">
+          <p class="text-white/60 font-heading font-medium text-xs md:text-sm tracking-widest uppercase">
+            {img.alt}
+          </p>
+          <div class="w-8 h-[1px] bg-gold/30 mx-auto mt-4 group-hover:w-12 group-hover:bg-gold transition-all duration-500"></div>
         </div>
       ))}
     </div>
