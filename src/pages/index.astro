@@ -1,18 +1,33 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
-import Trust from '../components/Trust.astro';
 import Services from '../components/Services.astro';
 import Gallery from '../components/Gallery.astro';
 import About from '../components/About.astro';
+import Testimonials from '../components/Testimonials.astro';
 import Contact from '../components/Contact.astro';
 ---
 
 <BaseLayout>
   <Hero lang="de" />
-  <Trust lang="de" />
+  <div class="relative h-16 -mt-1 pointer-events-none">
+    <div class="absolute inset-0" style="background: linear-gradient(to bottom, transparent, #F7F6F2);"></div>
+  </div>
   <Services lang="de" />
+  <div class="relative h-16 -mt-1 pointer-events-none">
+    <div class="absolute inset-0" style="background: linear-gradient(to bottom, #F7F6F2, #0E3D30);"></div>
+  </div>
   <Gallery lang="de" />
+  <div class="relative h-20 -mt-1 pointer-events-none">
+    <div class="absolute inset-0" style="background: linear-gradient(to bottom, #0E3D30, #FFFFFF);"></div>
+  </div>
   <About lang="de" />
+  <div class="relative h-24 -mt-1 pointer-events-none">
+    <div class="absolute inset-0" style="background: linear-gradient(to bottom, #FFFFFF, #F7F6F2);"></div>
+  </div>
+  <Testimonials lang="de" />
+  <div class="relative h-32 -mt-1 pointer-events-none">
+    <div class="absolute inset-0" style="background: linear-gradient(to bottom, #F7F6F2, #0B3B2E);"></div>
+  </div>
   <Contact lang="de" />
 </BaseLayout>
